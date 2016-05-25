@@ -8,10 +8,8 @@
 
 @interface YACCalculator : NSObject
 
-@property(nonatomic, readonly) NSString *expression;
-
 - (instancetype)initWithOperationManager:(id)operationManager;
 
-- (NSNumber *)evaluateExpression:(NSString *)expression;
+- (NSNumber *)evaluateExpression:(NSString *)expression error:(NSError **)error;
 
 @end

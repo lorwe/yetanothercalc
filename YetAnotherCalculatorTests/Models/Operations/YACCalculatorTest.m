@@ -34,11 +34,13 @@ YACOperationManager *_operationManager;
 
 - (void)testIfItEvalutesSimpleExpression {
 	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
-	NSString *expression = @"4 + 2 - 6 / 2 + 5 * 2";
+	NSString *expression = @"4 + 2 - 6 / 2 + 5 * 2 + 1";
+	NSError *error;
 
-	NSNumber *result = [calculator evaluateExpression:expression];
+	NSNumber *result = [calculator evaluateExpression:expression error:&error];
 
-	XCTAssertEqual(result.doubleValue, 4 + 2 - 6 / 2 + 5 * 2);
+	XCTAssertNil(error);
+	XCTAssertEqual(result.doubleValue, 4 + 2 - 6 / 2 + 5 * 2 + 1);
 }
 
 + (void)tearDown {

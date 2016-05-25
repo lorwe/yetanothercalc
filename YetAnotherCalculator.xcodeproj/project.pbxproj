@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5CB2E1B3BE956F4F56D9325F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2E1AD3141E7DFB0D23D50 /* LaunchScreen.storyboard */; };
+		5CB2E3F07E8C63EC2A3866F5 /* YACCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E634E1800FFFFC6E681A /* YACCalculator.m */; };
 		5CB2E65381324BA688920853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E400A55AE2B34D8AA5C4 /* AppDelegate.m */; };
+		5CB2E75785D39F05983FAFEE /* YACOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */; };
+		5CB2E9968EE60327C8C2176B /* YACStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E317E9969A3FF5EE7E60 /* YACStack.m */; };
 		5CB2EE41DDBB40DB7B458889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBC8703DFE0E671D4A7 /* Main.storyboard */; };
 		5CB2EF335AA9447E842968AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2E8EEC0F7AE2C8D1F8E29 /* Assets.xcassets */; };
 		5CB2EF780E413E4B5B2790C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E5AC1FED1C026514CC77 /* ViewController.m */; };
+		5CB2EFBBD436C8CDEE24E93E /* YACStackTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EC36C822DC5F7DEE3F05 /* YACStackTest.m */; };
 		758E39861CF5F7CA00160B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E39851CF5F7CA00160B49 /* main.m */; };
-		758E399F1CF5F7CA00160B49 /* YetAnotherCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 758E399E1CF5F7CA00160B49 /* YetAnotherCalculatorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,18 +30,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CB2E317E9969A3FF5EE7E60 /* YACStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACStack.m; sourceTree = "<group>"; };
 		5CB2E396893EF8CBA56339C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YetAnotherCalculator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		5CB2E3ABD120F02ECE93D166 /* YACStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACStack.h; sourceTree = "<group>"; };
 		5CB2E400A55AE2B34D8AA5C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5CB2E55833F86D0A62B95107 /* YACOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationProtocol.h; sourceTree = "<group>"; };
 		5CB2E5AC1FED1C026514CC77 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CB2E634E1800FFFFC6E681A /* YACCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACCalculator.m; sourceTree = "<group>"; };
 		5CB2E79B39B9982C2688877E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5CB2E83C3C3E1899DACC0D02 /* YACOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationManager.h; sourceTree = "<group>"; };
+		5CB2E8D66669287806DA8D19 /* YACCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACCalculator.h; sourceTree = "<group>"; };
 		5CB2E8EEC0F7AE2C8D1F8E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CB2E9B25C47A1F71EE32BA0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationManager.m; sourceTree = "<group>"; };
+		5CB2EC36C822DC5F7DEE3F05 /* YACStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACStackTest.m; sourceTree = "<group>"; };
 		5CB2EC968991C751DE590E08 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5CB2EE476DEA7C9FA3BC5373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YetAnotherCalculator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		758E39811CF5F7CA00160B49 /* YetAnotherCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YetAnotherCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758E39851CF5F7CA00160B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		758E399A1CF5F7CA00160B49 /* YetAnotherCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YetAnotherCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		758E399E1CF5F7CA00160B49 /* YetAnotherCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YetAnotherCalculatorTests.m; sourceTree = "<group>"; };
 		758E39A01CF5F7CA00160B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +80,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5CB2E20A42B371B9EE67A3C1 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				5CB2E317E9969A3FF5EE7E60 /* YACStack.m */,
+				5CB2E3ABD120F02ECE93D166 /* YACStack.h */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
 		5CB2E2D1B3F54E19781D73BE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,11 +107,49 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		5CB2E880ED39525E93426BFD /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				5CB2EC36C822DC5F7DEE3F05 /* YACStackTest.m */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		5CB2E9958F6F692E15BB4A54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5CB2E880ED39525E93426BFD /* Stack */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5CB2E9E3950582FAD8A6EF0B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5CB2E20A42B371B9EE67A3C1 /* Stack */,
+				5CB2EDAF0A1520F474E0B303 /* Calculator */,
+				5CB2EEC07B94EF44D7A85FAA /* Operations */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5CB2EDAF0A1520F474E0B303 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				5CB2E634E1800FFFFC6E681A /* YACCalculator.m */,
+				5CB2E8D66669287806DA8D19 /* YACCalculator.h */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		5CB2EEC07B94EF44D7A85FAA /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */,
+				5CB2E83C3C3E1899DACC0D02 /* YACOperationManager.h */,
+				5CB2E55833F86D0A62B95107 /* YACOperationProtocol.h */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		758E39781CF5F7C900160B49 = {
@@ -137,8 +194,8 @@
 		758E399D1CF5F7CA00160B49 /* YetAnotherCalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				758E399E1CF5F7CA00160B49 /* YetAnotherCalculatorTests.m */,
 				758E39A01CF5F7CA00160B49 /* Info.plist */,
+				5CB2E9958F6F692E15BB4A54 /* Models */,
 			);
 			path = YetAnotherCalculatorTests;
 			sourceTree = "<group>";
@@ -187,6 +244,7 @@
 		758E39791CF5F7C900160B49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YAC;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Farid;
 				TargetAttributes = {
@@ -246,6 +304,9 @@
 				758E39861CF5F7CA00160B49 /* main.m in Sources */,
 				5CB2E65381324BA688920853 /* AppDelegate.m in Sources */,
 				5CB2EF780E413E4B5B2790C1 /* ViewController.m in Sources */,
+				5CB2E9968EE60327C8C2176B /* YACStack.m in Sources */,
+				5CB2E3F07E8C63EC2A3866F5 /* YACCalculator.m in Sources */,
+				5CB2E75785D39F05983FAFEE /* YACOperationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				758E399F1CF5F7CA00160B49 /* YetAnotherCalculatorTests.m in Sources */,
+				5CB2EFBBD436C8CDEE24E93E /* YACStackTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 @implementation YACOperationMultiplication
 
 - (NSInteger)priority {
-	return 2;
+	return 3;
 }
 
 - (NSInteger)numberOfArguments {

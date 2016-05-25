@@ -46,7 +46,7 @@
 
 	NSInteger priority = operation.priority;
 
-	XCTAssertEqual(priority, 2);
+	XCTAssertEqual(priority, 3);
 }
 
 - (void)testIfItReturnsNumberOfArguments {

@@ -9,7 +9,7 @@
 @implementation YACOperationDivision
 
 - (NSInteger)priority {
-	return 2;
+	return 3;
 }
 
 - (NSInteger)numberOfArguments {

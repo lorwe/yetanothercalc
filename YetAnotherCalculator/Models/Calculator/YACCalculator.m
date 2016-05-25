@@ -9,6 +9,8 @@
 #import "YACCommons.h"
 #import "YACOperationProtocol.h"
 
+NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSyntaxException";
+
 
 @implementation YACCalculator {
 	YACOperationManager *_operationManager;
@@ -46,15 +48,17 @@
 	YACStack *operands = [YACStack new];
 	YACStack *operations = [YACStack new];
 
+	NSCharacterSet *numericCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
+
 	while (!scanner.atEnd) {
 
-		double nextOperand;
-		if ([scanner scanDouble:&nextOperand]) {
-			[operands push:@(nextOperand)];
+		NSString *token;
+
+		if ([scanner scanCharactersFromSet:numericCharacterSet intoString:&token]) {
+			[operands push:@([token doubleValue])];
 			continue;
 		}
 
-		NSString *token;
 		if ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&token]) {
 
 			token = [token stringByTrimmingCharactersInSet:scanner.charactersToBeSkipped];
@@ -74,6 +78,10 @@
 
 	while ([operations peek]) {
 		[self p_evaluateOperation:[operations pop] withOperands:operands];
+	}
+
+	if (operands.count != 1) {
+		@throw [NSException exceptionWithName:YACInvalidExpressionSyntaxException reason:@"Syntax mismatch in expression" userInfo:nil];
 	}
 
 	return [operands pop];

@@ -6,7 +6,7 @@
 //  Copyright (c) 2016 Farid. All rights reserved.
 //
 
-#import "../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers/XCTest.h"
+#import <XCTest/XCTest.h>
 #import "YACCalculator.h"
 #import "YACOperationManager.h"
 #import "YACOperationAddition.h"
@@ -32,7 +32,18 @@ YACOperationManager *_operationManager;
 	[_operationManager addOperation:[YACOperationDivision new] withToken:@"/"];
 }
 
-- (void)testIfItEvalutesSimpleExpression {
+- (void)testIfItEvaluatesSimpleExpression {
+	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
+	NSString *expression = @"3+2+1";
+	NSError *error;
+
+	NSNumber *result = [calculator evaluateExpression:expression error:&error];
+
+	XCTAssertNil(error);
+	XCTAssertEqual(result.doubleValue, 3 + 2 + 1);
+}
+
+- (void)testIfItEvaluatesComplexExpression {
 	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
 	NSString *expression = @"4 + 2 - 6 / 2 + 5 * 2 + 1";
 	NSError *error;
@@ -41,6 +52,17 @@ YACOperationManager *_operationManager;
 
 	XCTAssertNil(error);
 	XCTAssertEqual(result.doubleValue, 4 + 2 - 6 / 2 + 5 * 2 + 1);
+}
+
+- (void)testIfItEvaluatesFloatingPointExpression {
+	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
+	NSString *expression = @"3.5+2.1 / 2";
+	NSError *error;
+
+	NSNumber *result = [calculator evaluateExpression:expression error:&error];
+
+	XCTAssertNil(error);
+	XCTAssertEqual(result.doubleValue, 3.5 + 2.1 / 2);
 }
 
 + (void)tearDown {

@@ -5,6 +5,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const YACInvalidExpressionSyntaxException;
+
 
 @interface YACCalculator : NSObject
 

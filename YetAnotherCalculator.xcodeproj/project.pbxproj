@@ -13,6 +13,8 @@
 		5CB2E57DBEC7ACA7480449A7 /* YACOperationAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EF3685D314832E7E921F /* YACOperationAddition.m */; };
 		5CB2E65381324BA688920853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E400A55AE2B34D8AA5C4 /* AppDelegate.m */; };
 		5CB2E75785D39F05983FAFEE /* YACOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */; };
+		5CB2E8B1BE03C9B46EC8B59C /* YACOperationSubstractionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E3FE18C1C3444ECDA4FE /* YACOperationSubstractionTest.m */; };
+		5CB2E8B9439249EA7FFD175A /* YACOperationSubstraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E6B3DD07FD8AE58D572B /* YACOperationSubstraction.m */; };
 		5CB2E9968EE60327C8C2176B /* YACStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E317E9969A3FF5EE7E60 /* YACStack.m */; };
 		5CB2EE41DDBB40DB7B458889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBC8703DFE0E671D4A7 /* Main.storyboard */; };
 		5CB2EF335AA9447E842968AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2E8EEC0F7AE2C8D1F8E29 /* Assets.xcassets */; };
@@ -32,15 +34,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CB2E143ED1EA9C3ED1908CE /* YACOperationSubstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationSubstraction.h; sourceTree = "<group>"; };
 		5CB2E317E9969A3FF5EE7E60 /* YACStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACStack.m; sourceTree = "<group>"; };
 		5CB2E396893EF8CBA56339C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YetAnotherCalculator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		5CB2E3ABD120F02ECE93D166 /* YACStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACStack.h; sourceTree = "<group>"; };
+		5CB2E3FE18C1C3444ECDA4FE /* YACOperationSubstractionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationSubstractionTest.m; sourceTree = "<group>"; };
 		5CB2E400A55AE2B34D8AA5C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5CB2E47DCDC23B9D71E1FC84 /* YACOperationAdditionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationAdditionTest.m; sourceTree = "<group>"; };
 		5CB2E4FDAF73ED247B261A74 /* YACOperationAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationAddition.h; sourceTree = "<group>"; };
 		5CB2E55833F86D0A62B95107 /* YACOperationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationProtocol.h; sourceTree = "<group>"; };
 		5CB2E5AC1FED1C026514CC77 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5CB2E634E1800FFFFC6E681A /* YACCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACCalculator.m; sourceTree = "<group>"; };
+		5CB2E6B3DD07FD8AE58D572B /* YACOperationSubstraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationSubstraction.m; sourceTree = "<group>"; };
 		5CB2E79B39B9982C2688877E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CB2E83C3C3E1899DACC0D02 /* YACOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationManager.h; sourceTree = "<group>"; };
 		5CB2E8D66669287806DA8D19 /* YACCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACCalculator.h; sourceTree = "<group>"; };
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5CB2E47DCDC23B9D71E1FC84 /* YACOperationAdditionTest.m */,
+				5CB2E3FE18C1C3444ECDA4FE /* YACOperationSubstractionTest.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 				5CB2E55833F86D0A62B95107 /* YACOperationProtocol.h */,
 				5CB2EF3685D314832E7E921F /* YACOperationAddition.m */,
 				5CB2E4FDAF73ED247B261A74 /* YACOperationAddition.h */,
+				5CB2E6B3DD07FD8AE58D572B /* YACOperationSubstraction.m */,
+				5CB2E143ED1EA9C3ED1908CE /* YACOperationSubstraction.h */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 				5CB2E3F07E8C63EC2A3866F5 /* YACCalculator.m in Sources */,
 				5CB2E75785D39F05983FAFEE /* YACOperationManager.m in Sources */,
 				5CB2E57DBEC7ACA7480449A7 /* YACOperationAddition.m in Sources */,
+				5CB2E8B9439249EA7FFD175A /* YACOperationSubstraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +342,7 @@
 			files = (
 				5CB2EFBBD436C8CDEE24E93E /* YACStackTest.m in Sources */,
 				5CB2E078375F4AD9829F007C /* YACOperationAdditionTest.m in Sources */,
+				5CB2E8B1BE03C9B46EC8B59C /* YACOperationSubstractionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

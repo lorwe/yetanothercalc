@@ -14,4 +14,6 @@
 
 - (id)peek;
 
+- (NSUInteger)count;
+
 @end

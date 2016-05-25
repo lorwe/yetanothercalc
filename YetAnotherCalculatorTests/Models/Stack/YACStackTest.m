@@ -53,4 +53,14 @@
 	XCTAssertEqualObjects(itemsToPush, poppedItems);
 }
 
+- (void)testIfReturnsCount {
+	YACStack *stack = [YACStack new];
+	[stack push:@"item1"];
+	[stack push:@"item2"];
+
+	NSUInteger count = stack.count;
+
+	XCTAssertEqual(count, 2);
+}
+
 @end

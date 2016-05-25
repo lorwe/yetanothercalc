@@ -33,4 +33,8 @@
 	return _items.lastObject;
 }
 
+- (NSUInteger)count {
+	return _items.count;
+}
+
 @end

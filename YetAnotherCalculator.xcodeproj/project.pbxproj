@@ -11,12 +11,14 @@
 		5CB2E1B3BE956F4F56D9325F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2E1AD3141E7DFB0D23D50 /* LaunchScreen.storyboard */; };
 		5CB2E3F07E8C63EC2A3866F5 /* YACCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E634E1800FFFFC6E681A /* YACCalculator.m */; };
 		5CB2E57DBEC7ACA7480449A7 /* YACOperationAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EF3685D314832E7E921F /* YACOperationAddition.m */; };
+		5CB2E5E4DB2E9487DFC9946A /* YACOperationDivisionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2ED42C68065E518A2995F /* YACOperationDivisionTest.m */; };
 		5CB2E65381324BA688920853 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E400A55AE2B34D8AA5C4 /* AppDelegate.m */; };
 		5CB2E6C910FBE479BC841637 /* YACOperationMultiplicationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E7CC9B78C53F70F75DA0 /* YACOperationMultiplicationTest.m */; };
 		5CB2E75785D39F05983FAFEE /* YACOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */; };
 		5CB2E8B1BE03C9B46EC8B59C /* YACOperationSubstractionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E3FE18C1C3444ECDA4FE /* YACOperationSubstractionTest.m */; };
 		5CB2E8B9439249EA7FFD175A /* YACOperationSubstraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E6B3DD07FD8AE58D572B /* YACOperationSubstraction.m */; };
 		5CB2E9968EE60327C8C2176B /* YACStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E317E9969A3FF5EE7E60 /* YACStack.m */; };
+		5CB2EBB92B8AD0F6F953B30F /* YACOperationDivision.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E14BE7DA2576D5460633 /* YACOperationDivision.m */; };
 		5CB2EE41DDBB40DB7B458889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2EBBC8703DFE0E671D4A7 /* Main.storyboard */; };
 		5CB2EEE3FAE2E9EA500ECDB3 /* YACOperationMultiplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB2E3ADF1D80313BAFE1F2A /* YACOperationMultiplication.m */; };
 		5CB2EF335AA9447E842968AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB2E8EEC0F7AE2C8D1F8E29 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		5CB2E143ED1EA9C3ED1908CE /* YACOperationSubstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationSubstraction.h; sourceTree = "<group>"; };
+		5CB2E14BE7DA2576D5460633 /* YACOperationDivision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationDivision.m; sourceTree = "<group>"; };
+		5CB2E15BC24652F8E96228AF /* YACOperationDivision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationDivision.h; sourceTree = "<group>"; };
 		5CB2E317E9969A3FF5EE7E60 /* YACStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACStack.m; sourceTree = "<group>"; };
 		5CB2E3245D27505F887C32C0 /* YACOperationMultiplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YACOperationMultiplication.h; sourceTree = "<group>"; };
 		5CB2E396893EF8CBA56339C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YetAnotherCalculator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
@@ -59,6 +63,7 @@
 		5CB2EBBE6D218D9E6AA20F0A /* YACOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationManager.m; sourceTree = "<group>"; };
 		5CB2EC36C822DC5F7DEE3F05 /* YACStackTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACStackTest.m; sourceTree = "<group>"; };
 		5CB2EC968991C751DE590E08 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5CB2ED42C68065E518A2995F /* YACOperationDivisionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationDivisionTest.m; sourceTree = "<group>"; };
 		5CB2EE476DEA7C9FA3BC5373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = YetAnotherCalculator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		5CB2EF3685D314832E7E921F /* YACOperationAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YACOperationAddition.m; sourceTree = "<group>"; };
 		758E39811CF5F7CA00160B49 /* YetAnotherCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YetAnotherCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +141,7 @@
 				5CB2E47DCDC23B9D71E1FC84 /* YACOperationAdditionTest.m */,
 				5CB2E3FE18C1C3444ECDA4FE /* YACOperationSubstractionTest.m */,
 				5CB2E7CC9B78C53F70F75DA0 /* YACOperationMultiplicationTest.m */,
+				5CB2ED42C68065E518A2995F /* YACOperationDivisionTest.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 				5CB2E143ED1EA9C3ED1908CE /* YACOperationSubstraction.h */,
 				5CB2E3ADF1D80313BAFE1F2A /* YACOperationMultiplication.m */,
 				5CB2E3245D27505F887C32C0 /* YACOperationMultiplication.h */,
+				5CB2E14BE7DA2576D5460633 /* YACOperationDivision.m */,
+				5CB2E15BC24652F8E96228AF /* YACOperationDivision.h */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 				5CB2E57DBEC7ACA7480449A7 /* YACOperationAddition.m in Sources */,
 				5CB2E8B9439249EA7FFD175A /* YACOperationSubstraction.m in Sources */,
 				5CB2EEE3FAE2E9EA500ECDB3 /* YACOperationMultiplication.m in Sources */,
+				5CB2EBB92B8AD0F6F953B30F /* YACOperationDivision.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +362,7 @@
 				5CB2E078375F4AD9829F007C /* YACOperationAdditionTest.m in Sources */,
 				5CB2E8B1BE03C9B46EC8B59C /* YACOperationSubstractionTest.m in Sources */,
 				5CB2E6C910FBE479BC841637 /* YACOperationMultiplicationTest.m in Sources */,
+				5CB2E5E4DB2E9487DFC9946A /* YACOperationDivisionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

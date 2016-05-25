@@ -13,6 +13,8 @@
 #import "YACOperationSubstraction.h"
 #import "YACOperationMultiplication.h"
 #import "YACOperationDivision.h"
+#import "YACOperationOpeningBracket.h"
+#import "YACOperationClosingBracket.h"
 
 @interface YACCalculatorTest : XCTestCase
 
@@ -30,6 +32,8 @@ YACOperationManager *_operationManager;
 	[_operationManager addOperation:[YACOperationSubstraction new] withToken:@"-"];
 	[_operationManager addOperation:[YACOperationMultiplication new] withToken:@"*"];
 	[_operationManager addOperation:[YACOperationDivision new] withToken:@"/"];
+	[_operationManager addOperation:[YACOperationOpeningBracket new] withToken:@"("];
+	[_operationManager addOperation:[YACOperationClosingBracket new] withToken:@")"];
 }
 
 - (void)testIfItEvaluatesSimpleExpression {
@@ -63,6 +67,28 @@ YACOperationManager *_operationManager;
 
 	XCTAssertNil(error);
 	XCTAssertEqual(result.doubleValue, 3.5 + 2.1 / 2);
+}
+
+- (void)testIfItEvaluatesSimpleExpressionWithBrackets {
+	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
+	NSString *expression = @"5*(1+2)";
+	NSError *error;
+
+	NSNumber *result = [calculator evaluateExpression:expression error:&error];
+
+	XCTAssertNil(error);
+	XCTAssertEqual(result.doubleValue, 5 * (1 + 2));
+}
+
+- (void)testIfItEvaluatesExpressionWithBrackets {
+	YACCalculator *calculator = [[YACCalculator alloc] initWithOperationManager:_operationManager];
+	NSString *expression = @"3+(5+3*(4-2))*2";
+	NSError *error;
+
+	NSNumber *result = [calculator evaluateExpression:expression error:&error];
+
+	XCTAssertNil(error);
+	XCTAssertEqual(result.doubleValue, 3 + (5 + 3 * (4 - 2)) * 2);
 }
 
 + (void)tearDown {

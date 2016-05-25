@@ -9,6 +9,8 @@
 #import "YACOperationSubstraction.h"
 #import "YACOperationMultiplication.h"
 #import "YACOperationDivision.h"
+#import "YACOperationClosingBracket.h"
+#import "YACOperationOpeningBracket.h"
 
 
 @implementation YACMyCalculator
@@ -23,7 +25,8 @@ static YACOperationManager *_operationManager;
 	[_operationManager addOperation:[YACOperationSubstraction new] withToken:@"-"];
 	[_operationManager addOperation:[YACOperationMultiplication new] withToken:@"*"];
 	[_operationManager addOperation:[YACOperationDivision new] withToken:@"/"];
-
+	[_operationManager addOperation:[YACOperationOpeningBracket new] withToken:@"("];
+	[_operationManager addOperation:[YACOperationClosingBracket new] withToken:@")"];
 }
 
 + (YACCalculator *)instance {

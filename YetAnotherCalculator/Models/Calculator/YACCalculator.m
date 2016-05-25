@@ -11,6 +11,9 @@
 
 NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSyntaxException";
 
+NSString *const kOpeningBracket = @"(";
+NSString *const kClosingBracket = @")";
+
 
 @implementation YACCalculator {
 	YACOperationManager *_operationManager;
@@ -49,6 +52,7 @@ NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSynt
 	YACStack *operations = [YACStack new];
 
 	NSCharacterSet *numericCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
+	NSCharacterSet *numbersAndBracketsCharacterSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789("];
 
 	while (!scanner.atEnd) {
 
@@ -59,7 +63,23 @@ NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSynt
 			continue;
 		}
 
-		if ([scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:&token]) {
+		if ([scanner scanString:kOpeningBracket intoString:&token]) {
+			[operations push:[_operationManager operationByToken:token]];
+			continue;
+		}
+
+		if ([scanner scanString:kClosingBracket intoString:&token]) {
+			id <YACOperationProtocol> recentOperation = [operations peek];
+			while (recentOperation && recentOperation != [_operationManager operationByToken:kOpeningBracket]) {
+				[operations pop];
+				[self p_evaluateOperation:recentOperation withOperands:operands];
+				recentOperation = [operations peek];
+			}
+			[operations pop];
+			continue;
+		}
+
+		if ([scanner scanUpToCharactersFromSet:numbersAndBracketsCharacterSet intoString:&token]) {
 
 			token = [token stringByTrimmingCharactersInSet:scanner.charactersToBeSkipped];
 
@@ -73,7 +93,11 @@ NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSynt
 			}
 
 			[operations push:nextOperation];
+
+			continue;
 		}
+
+		@throw [NSException exceptionWithName:YACInvalidExpressionSyntaxException reason:@"Syntax mismatch in expression" userInfo:nil];
 	}
 
 	while ([operations peek]) {
@@ -90,11 +114,13 @@ NSString *const YACInvalidExpressionSyntaxException = @"YACInvalidExpressionSynt
 - (void)p_evaluateOperation:(id <YACOperationProtocol>)operation withOperands:(YACStack *)operands {
 	NSMutableArray *arguments = [NSMutableArray array];
 	for (NSInteger nOperands = 0; nOperands < operation.numberOfArguments; nOperands++) {
-		[arguments insertObject:operands.pop atIndex:0];
+		[arguments insertObject:[operands pop] atIndex:0];
 	}
 
 	NSNumber *result = [operation evaluateWithArguments:arguments];
-	[operands push:result];
+	if (result) {
+		[operands push:result];
+	}
 }
 
 @end

@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic, strong) IBOutlet UITextField *fldExpreassion;
+@property(nonatomic, strong) IBOutlet UILabel *lblResult;
+
+- (IBAction)didEvaluateButtonTouch:(id)sender;
 
 @end
 

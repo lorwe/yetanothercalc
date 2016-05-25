@@ -7,21 +7,36 @@
 //
 
 #import "ViewController.h"
+#import "YACCalculator.h"
+#import "YACMyCalculator.h"
 
-@interface ViewController ()
 
-@end
-
-@implementation ViewController
+@implementation ViewController {
+	YACCalculator *_calculator;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+	_calculator = [YACMyCalculator instance];
 }
 
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
+- (IBAction)didEvaluateButtonTouch:(id)sender {
+	NSError *error = nil;
+
+	NSNumber *result = [_calculator evaluateExpression:self.fldExpreassion.text
+												 error:&error];
+	if (error) {
+		[[[UIAlertView alloc] initWithTitle:@"Error"
+									message:error.localizedDescription
+								   delegate:nil
+						  cancelButtonTitle:@"Ok"
+						  otherButtonTitles:nil] show];
+
+		self.lblResult.text = @"= ERROR";
+	} else {
+		self.lblResult.text = [NSString stringWithFormat:@"= %@", result];
+	}
 }
 
 @end

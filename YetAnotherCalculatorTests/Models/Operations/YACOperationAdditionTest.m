@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "YACOperationProtocol.h"
+#import "YACOperationAddition.h"
 
 @interface YACOperationAdditionTest : XCTestCase
 
@@ -16,7 +17,7 @@
 @implementation YACOperationAdditionTest
 
 - (void)testIfItAddsNumbers {
-	id <YACOperationProtocol> operation;
+	id <YACOperationProtocol> operation = [YACOperationAddition new];
 	NSArray *arguments = @[@8, @2];
 
 	NSNumber *result = [operation evaluateWithArguments:arguments];

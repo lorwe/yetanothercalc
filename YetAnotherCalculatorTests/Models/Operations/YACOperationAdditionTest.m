@@ -25,4 +25,20 @@
 	XCTAssertEqualObjects(result, @10);
 }
 
+- (void)testIfItThrowsInvalidArgumentExceptionWithSingleArgument {
+	id <YACOperationProtocol> operation = [YACOperationAddition new];
+	NSArray *arguments = @[@8];
+
+	XCTAssertThrowsSpecificNamed([operation evaluateWithArguments:arguments], NSException, NSInvalidArgumentException);
+}
+
+- (void)testIfItThrowsInvalidArgumentExceptionOnInvalidArgument {
+	id <YACOperationProtocol> operation = [YACOperationAddition new];
+	NSArray *arguments1 = @[@"foo", @2];
+	NSArray *arguments2 = @[@2, @"foo"];
+
+	XCTAssertThrowsSpecificNamed([operation evaluateWithArguments:arguments1], NSException, NSInvalidArgumentException);
+	XCTAssertThrowsSpecificNamed([operation evaluateWithArguments:arguments2], NSException, NSInvalidArgumentException);
+}
+
 @end

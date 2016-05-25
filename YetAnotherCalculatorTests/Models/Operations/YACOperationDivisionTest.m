@@ -56,4 +56,14 @@
 
 	XCTAssertEqual(numberOfArguments, 2);
 }
+
+- (void)testIfItReturnsInfinityOnDivisionByZero {
+	id <YACOperationProtocol> operation = [YACOperationDivision new];
+	NSArray *arguments = @[@9, @0];
+
+	NSNumber *result = [operation evaluateWithArguments:arguments];
+
+	XCTAssertEqualObjects(result, @(INFINITY));
+}
+
 @end
